@@ -33,7 +33,7 @@ class ProductController extends Controller
 
         return view('backend.product.product_add', compact('families', 'unitMeasures', 'taxRates'));
 =======
-        return view('backend.product.product_add', compact('familys','unitMesures','taxRates'));
+
 >>>>>>> 4ad9b74aa8af4abfc993c5fb0173e513015902f0
     }
 
