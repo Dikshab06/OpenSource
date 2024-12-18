@@ -12,6 +12,7 @@
     <!-- App favicon -->
     <link rel="shortcut icon" href="{{ asset('backend/assets/images/favicon.ico') }}">
 
+    <!-- Select 2 Component -->
     <link href="{{ asset('backend/assets/libs/select2/css/select2.min.css') }}" rel="stylesheet" type="text/css">
 
     <!-- jquery.vectormap css -->
@@ -126,24 +127,21 @@
     }
     @endif
 </script>
-<!-- Required datatable js -->
-<script src="{{ asset('backend/assets/libs/datatables.net/js/jquery.dataTables.min.js') }}"></script>
-<script src="{{ asset('backend/assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
-<!-- Datatable ini js -->
-<script src="{{ asset('backend/assets/js/pages/datatables.init.js') }}"></script>
-<script src="{{ asset('backend/assets/js/validate.min.js') }}"></script>
-<script src="{{ asset('backend/assets/js/handlebars.js') }}"></script>
-<script src="{{ asset('backend/assets/js/app.js') }}"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js" ></script>
+    <!-- Required datatable js -->
+        <script src="{{ asset('backend/assets/libs/datatables.net/js/jquery.dataTables.min.js') }}"></script>
+        <script src="{{ asset('backend/assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
+    
+        <!-- Datatable ini js -->
+        <script src="{{ asset('backend/assets/js/pages/datatables.init.js') }}"></script>
+        <script src="{{ asset('backend/assets/js/validate.min.js') }}"></script>
 
-<!--mensagens alert box-->
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-<script src="{{ asset('backend/assets/js/sweetalert2.js') }}"></script>
+    <!-- Messages Alert Box -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <script src="{{ asset('backend/assets/js/sweetalert2.js') }}"></script>
 
-<!-- Select 2 Component -->
-<script src="{{asset('backend/assets/libs/select2/js/select2.min.js')}}"></script>
-<script src="{{asset('backend/assets/js/pages/form-advanced.init.js')}}"></script>
-
+    <!-- Select 2 Component -->
+        <script src="{{asset('backend/assets/libs/select2/js/select2.min.js')}}"></script>
+        <script src="{{asset('backend/assets/js/pages/form-advanced.init.js')}}"></script>
 </body>
 
 </html>

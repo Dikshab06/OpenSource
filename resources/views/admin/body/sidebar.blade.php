@@ -1,7 +1,9 @@
  <div class="vertical-menu">
 
                 <div data-simplebar class="h-100">
+
                     <!-- User details -->
+
 
                     <!--- Sidemenu -->
                     <div id="sidebar-menu">
@@ -27,48 +29,35 @@
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="">Series</a></li>
-                                    <li><a href="">Tax Rates</a></li>
-                                    <li><a href="">Units</a></li>
-                                    <li><a href="{{route('postalCode.all')}}">Postal Code</a></li>
-                                    <li><a href="{{route('family.all')}}">Family</a></li>
-                                    <li><a href="{{route('unitMesure.all')}}">UnitMesure</a></li>
-                                    <li><a href="{{route('taxRate.all')}}">TaxRate</a></li>
-                                </ul>
-                            </li>
-
-
-                            <li>
-                                <a href="javascript: void(0);" class="has-arrow waves-effect">
-                                    <i class="ri-file-text-line"></i>
-                                    <span>Business Partners</span>
-                                </a>
-                                <ul class="sub-menu" aria-expanded="true">
-                                    <li>
-                                        <a href="javascript: void(0);" class="has-arrow">Entry Documents</a>
-                                        <ul class="sub-menu" aria-expanded="true">
-                                            <li><a href="{{route('supplier.all')}}">Suppliers</a></li>
-                                            <li><a href="customers.html">Customers</a></li>
-                                            <li><a href="leads.html">Leads</a></li>
-                                        </ul>
-                                        <ul class="sub-menu" aria-expanded="true">
-                                            <li><a href="ed1.html">Quotation Request</a></li>
-                                            <li><a href="ed2.html">Puchase Order</a></li>
-                                            <li><a href="ed3.html">Good Receipt</a></li>
-                                            <li><a href="{{route('product.all')}}">Products</a></li>
-                                        </ul>
-
-                                    </li>
+                                    <li><a href="{{ route('taxRate.all') }}">Tax Rates</a></li>
+                                    <li><a href="{{ route('unitMeasure.all') }}">Measurement Units</a></li>
+                                    <li><a href="{{ route('postalCode.all') }}">Postal Codes</a></li>
+                                    <li><a href="{{ route('family.all') }}">Families</a></li>
                                 </ul>
                             </li>
 
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow waves-effect">
                                     <i class="ri-table-2"></i>
-                                    <span>Statistics</span>
+                                    <span>Business Partners</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="">Opção 1</a></li>
+                                    <li><a href="{{ route('supplier.all') }}">Suppliers</a></li>
+                                    <li><a href="customers.html">Customers</a></li>
+                                    <li><a href="leads.html">Leads</a></li>
+                                </ul>
+                            </li>
 
+                            <li>
+                                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                    <i class="ri-table-2"></i>
+                                    <span>Products</span>
+                                </a>
+                                <ul class="sub-menu" aria-expanded="false">
+                                    <li><a href="ed1.html">Quotation Request</a></li>
+                                    <li><a href="ed2.html">Purchase Order</a></li>
+                                    <li><a href="ed3.html">Goods Receipt</a></li>
+                                    <li><a href="{{ route('product.all') }}">Products</a></li>
                                 </ul>
                             </li>
 
@@ -98,6 +87,11 @@
                                     <li><a href="???">Alexa</a></li>
                                 </ul>
                             </li>
+
+
+
+
+
 
                         </ul>
                     </div>

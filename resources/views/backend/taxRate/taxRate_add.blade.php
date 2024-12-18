@@ -8,58 +8,69 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">Add Tax Rate</h4><br><br>
-                        <form method="post" action="{{route('taxRate.store')}}" id="myForm">
-                            @csrf                       
+                        <form method="post" action="{{ route('taxRate.store') }}" id="myForm">
+                            @csrf
                             <div class="row mb-3">
-                                <label for="example-text-input" class="col-sm-2 col-form-label">TaxRateCode</label>
+                                <label for="example-text-input" class="col-sm-2 col-form-label">
+                                Tax Rate Code</label>
                                 <div class="form-group col-sm-10">
                                     <input name="taxRateCode" class="form-control" type="number">
                                 </div>
-                            </div>                           
-                            <div class="row mb-3">
-                                <label for="example-text-input" class="col-sm-2 col-form-label">Description</label>
-                                <div class="form-group col-sm-10">
-                                    <input name="description" class="form-control" type="text" >
-                                </div>
-                            </div> 
+                            </div>
                             <!-- end row -->
+
                             <div class="row mb-3">
-                                <label for="example-text-input" class="col-sm-2 col-form-label">TaxRate %</label>
+                                <label for="example-text-input" class="col-sm-2 col-form-label">
+                                Description</label>
+                                <div class="form-group col-sm-10">
+                                    <input name="descriptionTaxRate" class="form-control" type="text">
+                                </div>
+                            </div>
+                            <!-- end row -->
+
+                            <div class="row mb-3">
+                                <label for="example-text-input" class="col-sm-2 col-form-label">
+                                Tax Rate %</label>
                                 <div class="form-group col-sm-10">
                                     <input name="taxRate" class="form-control" type="number">
                                 </div>
-                            </div>    
-                            <input type="submit" class="btn btn-info waves-effect waves-light" value="Add TaxRate">
-                        </form>
+                            </div>
+                            <!-- end row -->
+
+                            <input type="submit" class="btn btn-info waves-effect waves-light"
+                            value="Add Tax Rate">
+                        </form>    
                     </div>
                 </div>
             </div> <!-- end col -->
         </div>
     </div>
 </div>
+
 <script type="text/javascript">
     $(document).ready(function (){
+        
         $('#myForm').validate({
             rules: {
-                taxRate: {
-                    required : true,
-                }, 
                 taxRateCode: {
                     required : true,
-                }, 
-                description: {
+                },
+                descriptionTaxRate: {
                     required : true,
-                }, 
+                },
+                TaxRate: {
+                    required : true,
+                },
             },
             messages :{
-                taxRate: {
-                    required : 'Please Enter Tax Rate.',
-                },
                 taxRateCode: {
-                    required : 'Please Enter Code.',
+                    required : 'Please Enter Tax Rate Code.',
                 },
-                description: {
-                    required : 'Please Enter Description.',
+                descriptionTaxRate: {
+                    required : 'Please Enter Tax Rate Description.',
+                },
+                TaxRate: {
+                    required : 'Please Enter Tax Rate %.',
                 },
             },
             errorElement : 'span', 
@@ -76,4 +87,5 @@
         });
     }); 
 </script>
-@endsection
+
+@endsection 

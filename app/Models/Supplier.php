@@ -11,8 +11,7 @@ class Supplier extends Model
     protected $table = "Supplier";
     protected $guarded = [];
 
-
     public function postalCodeLink(){
-        return $this->belongsTO(PostalCode::class, 'postalCode', 'postalCode');
+        return $this->belongsTo(PostalCode::class, 'postalCode', 'postalCode');
     }
 }

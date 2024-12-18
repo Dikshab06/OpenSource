@@ -17,8 +17,8 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                    <a href="{{route('supplier.add')}}" class="btn btn-secondary btn-rounded waves-effect waves-light" style="float:right;">Add Supplier</a>
-                    <br><br>
+                        <a href="{{ route('supplier.add') }}" class="btn btn-secondary
+                        btn-rounded waves-effect waves-light" style="float:right;">Add Supplier</a> <br><br>
                         <h4 class="card-title">Suppliers All Data </h4>
                         <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                             <thead>
@@ -26,30 +26,35 @@
                                     <th>Ln</th>
                                     <th>Code</th> 
                                     <th>Name</th> 
-                                    <th>Address 1</th>  
-                                    <th>Address 2</th>  
-                                    <th>Town</th>  
-                                    <th>NIF</th>  
-                                    <th>PostalCode</th>  
-                                    <th>Location</th>  
-                                    <th>Action</th>  
+                                    <th>Address 1</th>
+                                    <th>Address 2</th>
+                                    <th>Town</th>
+                                    <th>NIF</th>
+                                    <th>Postal Code</th>  
+                                    <th>Location</th>
+                                    <th>Town</th>
                                 </tr>
                             </thead>
                             <tbody> 
                         	   @foreach($suppliers as $key => $item)
                                     <tr>
                                         <td> {{ $key+1}} </td>
-                                        <td> {{ $item->code }} </td> 
-                                        <td> {{ $item->name }} </td> 
-                                        <td> {{ $item->address1 }} </td> 
-                                        <td> {{ $item->address2 }} </td> 
-                                        <td> {{ $item->town }} </td> 
-                                        <td> {{ $item->nif }} </td> 
+                                        <td> {{ $item->code }} </td>
+                                        <td> {{ $item->name }} </td>
+                                        <td> {{ $item->address1 }} </td>
+                                        <td> {{ $item->address2 }} </td>
+                                        <td> {{ $item->town }} </td>
+                                        <td> {{ $item->nif }} </td>
                                         <td> {{ $item->postalCode }} </td> 
                                         <td> {{ $item['postalCodeLink']['location'] }} </td> 
+                                        <td> {{ $item->town }}</td>
                                         <td>
-                                            <a href="{{route('supplier.edit',$item->id)}}" class="btn btn-info sm" title="Edit Data">  <i class="fas fa-edit"></i> </a>
-                                            <a href="{{route('supplier.delete',$item->id)}}" class="btn btn-danger sm" title="Delete Data" id="delete">  <i class="fas fa-trash-alt"></i> </a>
+                                            <a href="{{ route('supplier.edit', $item->id) }}" 
+                                            class="btn btn-info sm" title="Edit Data">
+                                            <i class="fas fa-edit"></i> </a>
+                                            <a href="{{ route('supplier.delete', $item->id) }}" 
+                                            class="btn btn-danger sm" title="Delete Data" id="delete">
+                                            <i class="fas fa-trash-alt"></i> </a>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -59,7 +64,7 @@
                 </div>
             </div> <!-- end col -->
         </div> <!-- end row -->                    
-    </div> <!-- container-fluid -->             
+    </div> <!-- container-fluid -->
 </div>
  
 

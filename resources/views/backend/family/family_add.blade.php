@@ -8,25 +8,29 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">Add Family</h4><br><br>
-                        <form method="post" action="{{route('family.store')}}" id="myForm">
+                        <form method="post" action="{{ route('family.store') }}" id="myForm">
                             @csrf
                             <div class="row mb-3">
-                                <label for="example-text-input" class="col-sm-2 col-form-label">Family</label>
+                                <label for="example-text-input" class="col-sm-2 col-form-label">
+                                Family</label>
                                 <div class="form-group col-sm-10">
-                                    <input name="family" class="form-control" type="text" id="family">
+                                    <input name="family" class="form-control" type="text">
                                 </div>
                             </div>
                             <!-- end row -->
-                            <input type="submit" class="btn btn-info waves-effect waves-light" value="Add Family">
-                        </form>
+                            <input type="submit" class="btn btn-info waves-effect waves-light"
+                            value="Add Family">
+                        </form>    
                     </div>
                 </div>
             </div> <!-- end col -->
         </div>
     </div>
 </div>
+
 <script type="text/javascript">
     $(document).ready(function (){
+
         $('#myForm').validate({
             rules: {
                 family: {
@@ -35,7 +39,7 @@
             },
             messages :{
                 family: {
-                    required : 'Please Enter Family.',
+                    required : 'Please Enter Family Description.',
                 },
             },
             errorElement : 'span', 
@@ -52,4 +56,5 @@
         });
     }); 
 </script>
-@endsection
+
+@endsection 

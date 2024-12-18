@@ -8,35 +8,54 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">Edit Family</h4><br><br>
-                        <form method="post" action="{{route('family.update')}}" id="myForm">
+                        <form method="post" action="{{ route('family.update') }}" id="myForm">
                             @csrf
-                            <input type="hidden" name="id" value="{{$family->id}}">
+
+                            <input type="hidden" name="id" value="{{ $family->id }}">
                             <div class="row mb-3">
-                                <label for="example-text-input" class="col-sm-2 col-form-label">Family</label>
+                                <label for="example-text-input" class="col-sm-2 col-form-label">
+                                Family</label>
                                 <div class="form-group col-sm-10">
-                                    <input name="family" class="form-control" type="text" value="{{$family->family}}">
+                                    <input name="family" class="form-control" 
+                                    value="{{ $family->family }}" type="text">
                                 </div>
-                            </div>                           
-                             <!-- end row -->
-                            <input type="submit" class="btn btn-info waves-effect waves-light" value="Update Family">
-                        </form>
+                            </div>
+                            <!-- end row -->
+
+                            <div class="row mb-3">
+                                <label for="example-text-input" class="col-sm-2 col-form-label">
+                                Location</label>
+                                <div class="form-group col-sm-10">
+                                    <input name="location" class="form-control"
+                                    value="{{ $postalCode->location }}" type="text">
+                                </div>
+                            </div>
+                            <!-- end row -->
+
+                            <input type="submit" class="btn btn-info waves-effect waves-light"
+                            value="Update Family">
+                        </form>    
                     </div>
                 </div>
             </div> <!-- end col -->
         </div>
     </div>
 </div>
+
 <script type="text/javascript">
     $(document).ready(function (){
         $('#myForm').validate({
             rules: {
                 family: {
                     required : true,
-                }, 
+                },
             },
             messages :{
                 family: {
-                    required : 'Please Enter Family.',
+                    required : 'Please Enter Family Description.',
+                },
+                location: {
+                    required : 'Please Enter Location.',
                 },
             },
             errorElement : 'span', 
@@ -53,4 +72,5 @@
         });
     }); 
 </script>
-@endsection
+
+@endsection 

@@ -7,60 +7,74 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Edit tax rate</h4><br><br>
-                        <form method="post" action="{{route('taxRate.update')}}" id="myForm">
+                        <h4 class="card-title">Edit Tax Rate</h4><br><br>
+                        <form method="post" action="{{ route('taxRate.update') }}" id="myForm">
                             @csrf
-                            <input type="hidden" name="id" value="{{$taxRate->id}}">                          
+
+                            <input type="hidden" name="id" value="{{ $taxRate->id }}">
                             <div class="row mb-3">
-                                <label for="example-text-input" class="col-sm-2 col-form-label">TaxRateCode</label>
+                                <label for="example-text-input" class="col-sm-2 col-form-label">
+                                Tax Rate Code</label>
                                 <div class="form-group col-sm-10">
-                                    <input name="taxRateCode" class="form-control" type="number" value="{{$taxRate->taxRateCode}}">
+                                    <input name="taxRateCode" class="form-control" 
+                                    value="{{ $taxRate->taxRateCode }}" type="number">
                                 </div>
-                            </div>                           
+                            </div>
+                            <!-- end row -->
+
                             <div class="row mb-3">
-                                <label for="example-text-input" class="col-sm-2 col-form-label">Description</label>
+                                <label for="example-text-input" class="col-sm-2 col-form-label">
+                                Description Tax Rate</label>
                                 <div class="form-group col-sm-10">
-                                    <input name="description" class="form-control" type="text" value="{{$taxRate->description}}">
+                                    <input name="descriptiontaxRate" class="form-control" 
+                                    value="{{ $taxRate->descriptiontaxRate }}" type="text">
                                 </div>
-                            </div>                           
-                             <!-- end row -->
+                            </div>
+                            <!-- end row -->
+
                             <div class="row mb-3">
-                                <label for="example-text-input" class="col-sm-2 col-form-label">TaxRate</label>
+                                <label for="example-text-input" class="col-sm-2 col-form-label">
+                                Tax Rate</label>
                                 <div class="form-group col-sm-10">
-                                    <input name="taxRate" class="form-control" type="text" value="{{$taxRate->taxRate}}">
+                                    <input name="taxRate" class="form-control" 
+                                    value="{{ $taxRate->taxRate }}" type="number">
                                 </div>
-                            </div> 
-                            <input type="submit" class="btn btn-info waves-effect waves-light" value="Update Tax Rate">
-                        </form>
+                            </div>
+                            <!-- end row -->
+
+                            <input type="submit" class="btn btn-info waves-effect waves-light"
+                            value="Update Tax Rate">
+                        </form>    
                     </div>
                 </div>
             </div> <!-- end col -->
         </div>
     </div>
 </div>
+
 <script type="text/javascript">
     $(document).ready(function (){
         $('#myForm').validate({
             rules: {
-                taxRate: {
-                    required : true,
-                }, 
                 taxRateCode: {
                     required : true,
-                }, 
-                description: {
+                },
+                descriptiontaxRate: {
                     required : true,
-                }, 
+                },
+                taxRate: {
+                    required : true,
+                },
             },
             messages :{
+                taxRateCode: {
+                    required : 'Please Enter Tax Rate Code.',
+                },
+                descriptiontaxRate: {
+                    required : 'Please Enter Tax Rate Description.',
+                },
                 taxRate: {
                     required : 'Please Enter Tax Rate.',
-                },
-                taxRateCode: {
-                    required : 'Please Enter Code.',
-                },
-                description: {
-                    required : 'Please Enter Description.',
                 },
             },
             errorElement : 'span', 
@@ -77,4 +91,5 @@
         });
     }); 
 </script>
-@endsection
+
+@endsection 

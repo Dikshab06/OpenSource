@@ -11,7 +11,6 @@ class Product extends Model
     protected $table = "Product";
     protected $guarded = [];
 
-
     public function codeRateLink(){
         return $this->belongsTO(TaxRate::class, 'taxRateCode', 'taxRateCode');
     }
