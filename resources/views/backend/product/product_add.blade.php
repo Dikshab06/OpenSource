@@ -33,11 +33,38 @@
                                         <input name="description" class="form-control" type="text">
                                     </div>
                                 </div>
+<<<<<<< HEAD
                                 <!-- end row -->
 
 
                                 <!-- Product Family -->
                                 <label for="example-text-input" class="col-sm-2 col-form-label">Group Family</label>
+=======
+                            </div>
+                            <!-- end row -->
+                            <div class="row mb-3">
+                                <label for="example-text-input" class="col-sm-2 col-form-label">Family</label>
+                                <select id="product_family" name="product_family" class="form-select select2" aria-label="Default select example">
+                                        <option selected=""></option>
+                                        @foreach($familys as $prod)
+                                        <option iOption= "" value="{{$prod->family}}">{{$prod->family}}</option>
+                                        @endforeach
+                                    </select>
+                            </div>
+                            <!-- end row -->
+                            <div class="row mb-3">
+                                <label for="example-text-input" class="col-sm-2 col-form-label">Unit</label>
+                                <select id="product_unit" name="product_unit" class="form-select select2" aria-label="Default select example">
+                                        <option selected=""></option>
+                                        @foreach($unitMesures as $prod)
+                                        <option iOption= "" value="{{$prod->unitMesure}}">{{$prod->unitMesure}}</option>
+                                        @endforeach
+                                    </select>
+                            </div>
+                            <!-- end row -->
+                            <div class="row mb-3">
+                                <label for="example-text-input" class="col-sm-2 col-form-label">Tax Rate</label>
+>>>>>>> 4ad9b74aa8af4abfc993c5fb0173e513015902f0
                                 <div class="form-group col-sm-2">
                                     <select id="product_family" name="product_family" aria-label="Default select example" class="form-select select2">
                                         <option select=""></option>
